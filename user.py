@@ -10,6 +10,10 @@ class User(object):
     def set_password(self, password):
         if self.__validate_password(password):
             self.__password = password
+    def set_wins(self, wins):
+        self.__wins = wins
+    def set_games(self, games):
+        self.__games = games
     def get_login(self):
         return self.__login
     def get_password(self):
