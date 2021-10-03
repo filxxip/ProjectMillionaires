@@ -13,11 +13,11 @@ class Question(object):
     def set_answers(self, answers):
         if self.__validate_answers(answers):
             self.__answers = answers
-    def set_answers(self, correct):
+    def set_correct(self, correct):
         if self.__validate_correct(correct):
             self.__correct = correct
     def __validate_power(self, power):
-        if power in (1, 2, 3):
+        if int(power) in (1, 2, 3):
             return True
         return False
     def __validate_answers(self, answers):
