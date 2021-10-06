@@ -1,5 +1,5 @@
 class Question(object):
-    def __init__(self, power, contents, answers, correct ):
+    def __init__(self, power, contents, correct, answers = [] ):
         self.__power = self.__contents = self.__answers = None
         self.set_power(power)
         self.set_contents(contents)
@@ -17,7 +17,7 @@ class Question(object):
         if self.__validate_correct(correct):
             self.__correct = correct
     def __validate_power(self, power):
-        if int(power) in (1, 2, 3):
+        if power in ("1", "2", "3"):
             return True
         return False
     def __validate_answers(self, answers):
